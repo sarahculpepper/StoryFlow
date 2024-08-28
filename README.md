@@ -1,19 +1,40 @@
-# Project Title
+# StoryFlow
 
-**Insert project description here**
+**StoryFlow** is an advanced, all-in-one broadcast news story planner inspired by the Nexstar Daybook. It is designed to streamline and enhance the way newsrooms operate, providing a robust toolset for managing news production workflows, content sharing, and team collaboration.
 
-**Change the URLs of the deployed app on Render**
+# About the Project
 
-The project is deployed on Render:
-[https://django-project-template.onrender.com](https://django-project-template.onrender.com)
+**StoryFlow** is a senior computer science project developed at the University of Louisiana at Lafayette. The project reflects the culmination of extensive study and hands-on experience in software development, with a focus on addressing real-world challenges faced by modern newsrooms.
 
-To develop the Django application, clone this repository and follow the instructions:
+# Key Features
 
-## What's Already Included in the Django Template?
+- **Latakoo & Bitcentral Integration:** Seamlessly integrates with Latakoo's Flight, HUB, and Manifest products, as well as Bitcentral's video management system, allowing for efficient video transfer, automation, and collaboration.
 
--   User Authentication System:
-    -   [Login](https://django-project-template.onrender.com/accounts/login/)
-    -   [User Registration](https://django-project-template.onrender.com/accounts/signup/)
+- **Enhanced Security:** StoryFlow is built with security in mind, utilizing HTTPS to ensure secure communication and data protection.
+
+- **AI Video Transcription:** Automatically transcribes video content using advanced AI, saving time and improving accessibility for your newsroom.
+
+- **Supers Field:** Easily manage lower-third graphics and supers directly within the planner.
+
+- **Direct Downloads:** Download video files straight to your machine without needing to transfer through Latakoo, simplifying the workflow.
+
+- **WordPress Integration:** Integrates with WordPress, allowing users to view and manage web pages directly in a new tab within the StoryFlow interface.
+
+- **Improved Organization:** Features a better organization system, making it easier to manage and track stories, scripts, and media assets.
+
+- **News Unit Tracking:** Includes an option to track news units, ensuring all resources are accounted for and efficiently deployed.
+
+- **Car Maintenance Section:** A dedicated section for managing the maintenance needs of your newsroom vehicles, keeping your fleet in top condition.
+
+**StoryFlow** is the next generation of newsroom management, providing everything you need to run a smooth, efficient, and secure broadcast operation. Whether you're coordinating content across multiple markets or simply trying to keep your local newsroom organized, StoryFlow is the tool you need.
+
+# Author
+
+Created by Sarah Culpepper. 
+
+**GitHub:** [@sarahculpepper](https://github.com/sarahculpepper) \
+**LinkedIn:** [@sarahcpepper](https://linkedin.com/in/sarahcpepper) \
+**Email:** sarah.culpepper2022@gmail.com
 
 ## Create Python Virtual Environment
 
@@ -64,125 +85,3 @@ python manage.py collectstatic --no-input
 ```bash
 python manage.py runserver
 ```
-
-## Developer's Guide
-
-### Visual Studio Code
-
-It's highly recommended to use [VSCode](https://code.visualstudio.com/) for the development.
-
-The project repository includes VSCode-specific settings ([.vscode/settings.json](.vscode/settings.json))
-that are helpful for developing Django applications.
-
-With the python virtual environment active, from the root of the repository,
-open the VSCode using the following command:
-
-```bash
-code .
-```
-
-Please install all the extensions (specified in [.vscode/extensions.json](.vscode/extensions.json))
-recommended by VSCode upon opening the project in the code editor.
-
-The [requirements.txt](requirements.txt) file includes the python packages required for some
-of the VScode extensions. That's why VSCode needs to be opened from the bash or command
-line with an active python virtual environment in which all the project-specific python packages
-are installed.
-
-Some fonts to reduce eye strain and provide better coding experience:
-
--   [FiraCode](https://github.com/tonsky/FiraCode)
--   [Jet Brains Mono](https://github.com/JetBrains/JetBrainsMono)
--   [Hack](https://github.com/source-foundry/Hack)
-
-### GitLab CI/CD pipelines
-
-Before performing a `git push`, run these commands to ensure that the new code changes passes
-the pipeline stages:
-
-#### Python linting
-
-**Pipeline Stage**: _lint_
-
-To ensure code changes meet the python coding and documentation standards, run the following
-commands:
-
-```bash
-pylama .
-```
-
-If the above command raises errors, fix the lines specified in the error messages.
-
-#### Django migrations
-
-**Pipeline Stage**: _build_
-
-To ensure Django migration files are created, applied, and added to git, run the following commands:
-
-```bash
-python manage.py makemigrations --check
-python manage.py migrate --check
-```
-
-If the any of the above commands raises an error, create migration files and add to the commit.
-
-#### Django Tests
-
-**Pipeline Stage**: _test_
-
-To ensure code changes passes all unit tests, run the following commands:
-
-```bash
-python manage.py test
-```
-
-## Team Members
-
-**Update the last name, first name, Render app name, and URLs in the table below **
-
-| Member ID | Role         | Last Name | First Name | Render App           |
-| --------- | ------------ | --------- | ---------- | -------------------- |
-| A         | Team Lead    | Last Name | First Name | [URL Text](FULL URL) |
-| B         | Tech Lead    | Last Name | First Name | [URL Text](FULL URL) |
-| C         | Product Lead | Last Name | First Name | [URL Text](FULL URL) |
-| D         | Flex Lead    | Last Name | First Name | [URL Text](FULL URL) |
-
-## Install Cypress
-
-Download and install [NodeJS v18 LTS](https://nodejs.org/en/download/).
-
-If the installation is successful, you will be able to run `npm` command from the CMD, bash, or terminal.
-
-Open another CMD prompt, bash, or terminal, navigate to the project's root directory, and run the command:
-
-```bash
-npm install cypress
-```
-
-This will download the cypress binaries in `node_modules` directory.
-
-It will take several minutes to download and install cypress.
-
-
-## Run Cypress E2E tests
-
-To execute all the cypress tests, run the following command:
-```bash
-npx cypress open
-```
-This command will open a browser window. Select the test as `E2E`.
-
-If there are multiple browsers on your machine, it will prompt to you to choose a browser to run Cypress tests.
-
-Upon choosing a browser to run Cypress tests, click on the `test.cy.js` file to start the tests.
-
-
-### (optional)
-Below command executes all Cypress tests in the terminal (tested in Linux bash):
-```bash
-npx cypress run --headless
-```
-
-## (Optional) Use Docker Containers for Development
-
-See [DOCKER.md](DOCKER.md) file.
